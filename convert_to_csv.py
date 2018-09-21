@@ -90,12 +90,17 @@ def itersheetrows():
 
         >>> rows = itersheetrows()
         >>> next(rows)
-        ['YEARS', 'BOROUGH', 'BOROUGH', 'NEIGHBORHOOD', 'BUILDING CLASS CATEGORY', 'TAX CLASS AT PRESENT', 'BLOCK', 'LOT', 'BUILDING CLASS AT PRESENT', 'ADDRESS', 'ZIP CODE', 'RESIDENTIAL UNITS', 'COMMERCIAL UNITS', 'TOTAL UNITS', 'LAND SQUARE FEET', 'GROSS SQUARE FEET', 'YEAR BUILT']
+        ['YEARS', 'BOROUGH', 'BOROUGH', 'NEIGHBORHOOD', 'BUILDING CLASS CATEGORY',
+         'TAX CLASS AT PRESENT', 'BLOCK', 'LOT', 'BUILDING CLASS AT PRESENT', 'ADDRESS',
+         'ZIP CODE', 'RESIDENTIAL UNITS', 'COMMERCIAL UNITS', 'TOTAL UNITS',
+         'LAND SQUARE FEET', 'GROSS SQUARE FEET', 'YEAR BUILT']
         >>> next(rows)
-        ['1415', 'bronx', 2.0, 'BATHGATE                 ', '03  3-FAMILY                                ', 1.0, 3030.0, 157.0, 'C0', '410 EAST 183 STREET                      ', 10458.0, 3.0, 0.0, 3.0, 2000.0, 4872.0, 2005.0]
+        ['1415', 'bronx', 2.0, 'BATHGATE                 ',
+         '03  3-FAMILY                                ',
+         1.0, 3030.0, 157.0, 'C0', '410 EAST 183 STREET                      ',
+         10458.0, 3.0, 0.0, 3.0, 2000.0, 4872.0, 2005.0]
 
-    By '1415' we mean that the row represents data from the
-    2014-2015 fiscal year.
+    By '1415' we mean that the row represents data from the 2014-2015 fiscal year.
     '''
 
     yield ['YEARS', 'BOROUGH'] + COLUMNS
