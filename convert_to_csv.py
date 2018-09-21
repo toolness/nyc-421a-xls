@@ -12,6 +12,8 @@ if MAX_ROWS == 0:
 
 OUTFILE = DATA_DIR / "421a.csv"
 
+# These are present in the filenames and captured in the "BOROUGH NAME"
+# field in the final CSV.
 BOROUGHS = [
     'manhattan',
     'queens',
@@ -20,6 +22,8 @@ BOROUGHS = [
     'bronx'
 ]
 
+# These are just the columns from the Excel spreadsheets, we add a
+# few to the final CSV.
 COLUMNS = [
     "BOROUGH",
     "NEIGHBORHOOD",
@@ -90,7 +94,7 @@ def itersheetrows():
 
         >>> rows = itersheetrows()
         >>> next(rows)
-        ['YEARS', 'BOROUGH', 'BOROUGH', 'NEIGHBORHOOD', 'BUILDING CLASS CATEGORY',
+        ['YEARS', 'BOROUGH NAME', 'BOROUGH', 'NEIGHBORHOOD', 'BUILDING CLASS CATEGORY',
          'TAX CLASS AT PRESENT', 'BLOCK', 'LOT', 'BUILDING CLASS AT PRESENT', 'ADDRESS',
          'ZIP CODE', 'RESIDENTIAL UNITS', 'COMMERCIAL UNITS', 'TOTAL UNITS',
          'LAND SQUARE FEET', 'GROSS SQUARE FEET', 'YEAR BUILT']
@@ -103,7 +107,7 @@ def itersheetrows():
     By '1415' we mean that the row represents data from the 2014-2015 fiscal year.
     '''
 
-    yield ['YEARS', 'BOROUGH'] + COLUMNS
+    yield ['YEARS', 'BOROUGH NAME'] + COLUMNS
 
     for f in DATA_DIR.glob('*'):
         years, borough = parse_filename(f.name)

@@ -2,6 +2,17 @@ This is a set of simple scripts that help convert NYC's
 open data on [Properties With a 421a Exemption][421a], which is
 in several separate Excel workbooks, into a single CSV file.
 
+## CSV format
+
+Here's some sample data from the big CSV file this generates:
+
+| YEARS | BOROUGH NAME | BOROUGH | NEIGHBORHOOD | BUILDING CLASS CATEGORY | TAX CLASS AT PRESENT | BLOCK  | LOT   | BUILDING CLASS AT PRESENT | ADDRESS             | ZIP CODE | RESIDENTIAL UNITS | COMMERCIAL UNITS | TOTAL UNITS | LAND SQUARE FEET | GROSS SQUARE FEET | YEAR BUILT |
+| ----- | ------------ | ------- | ------------ | ----------------------- | -------------------- | ------ | ----- | ------------------------- | ------------------- | -------- | ----------------- | ---------------- | ----------- | ---------------- | ----------------- | ---------- |
+| 1415  | bronx        | 2.0     | BATHGATE     | 03  3-FAMILY            | 1.0                  | 3030.0 | 157.0 | C0                        | 410 EAST 183 STREET | 10458.0  | 3.0               | 0.0              | 3.0         | 2000.0           | 4872.0            | 2005.0     |
+
+For more details on the format of the CSV file, see the
+documentation in [`convert_to_csv.py`](convert_to_csv.py).
+
 ## Quick start
 
 You will need Python 3.7 and [pipenv][].
