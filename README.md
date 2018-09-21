@@ -34,5 +34,9 @@ python convert_to_csv.py
 
 The CSV will be placed in `data/421a.csv`.
 
+## Tests
+
+Tests can be run via `pytest`.
+
 [421a]: https://www1.nyc.gov/site/finance/benefits/benefits-421a.page
 [pipenv]: https://docs.pipenv.org/
