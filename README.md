@@ -36,7 +36,8 @@ The CSV will be placed in `data/421a.csv`.
 
 ## Tests
 
-Tests can be run via `pytest`.
+Tests can be run via `pytest`. Make sure you've run `download.py` before
+running them, as they make use of the downloaded data.
 
 [421a]: https://www1.nyc.gov/site/finance/benefits/benefits-421a.page
 [pipenv]: https://docs.pipenv.org/
