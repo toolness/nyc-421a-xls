@@ -47,8 +47,23 @@ The CSV will be placed in `data/421a.csv`.
 
 ## Tests
 
-Tests can be run via `pytest`. Make sure you've run `download.py` before
-running them, as they make use of the downloaded data.
+Tests can be run via:
+
+```
+pytest
+```
+
+Make sure you've run `download.py` before running them, as they make
+use of the downloaded data.
+
+Manually running the `convert_to_csv.py` script can also be useful, but
+it can be a slog to have it run through all the rows of every single
+Excel sheet.  To limit it only to the first few rows of each sheet,
+you can use the `MAX_ROWS` environment variable, e.g.:
+
+```
+MAX_ROWS=20 python convert_to_csv.py
+```
 
 [421a]: https://www1.nyc.gov/site/finance/benefits/benefits-421a.page
 [pipenv]: https://docs.pipenv.org/
