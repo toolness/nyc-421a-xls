@@ -10,7 +10,7 @@ MAX_ROWS = int(os.environ.get('MAX_ROWS', '0'))
 if MAX_ROWS == 0:
     MAX_ROWS = float('inf')
 
-OUTFILE = DATA_DIR / "421a.csv"
+OUTFILE = DATA_DIR / "j51.csv"
 
 # These are present in the filenames and captured in the "BOROUGH NAME"
 # field in the final CSV.
