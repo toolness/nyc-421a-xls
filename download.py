@@ -11,7 +11,7 @@ DATA_DIR.mkdir(exist_ok=True)
 
 ORIGIN = "https://www1.nyc.gov"
 
-HTML_URL = f'{ORIGIN}/site/finance/benefits/benefits-421a.page'
+HTML_URL = f'{ORIGIN}/site/finance/benefits/benefits-j51.page'
 
 
 def download():
